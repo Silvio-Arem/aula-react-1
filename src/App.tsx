@@ -3,8 +3,13 @@ import { useState } from "react";
 import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
 
+interface Tarefa {
+  titulo: string;
+  done: boolean;
+}
+
 function App() {
-  const [tarefas, setTarefas] = useState(["tarefa 1"]);
+  const [tarefas, setTarefas] = useState<Tarefa>([]);
 
   function adicionarTarefa() {
     setTarefas([...tarefas, "tarefa 2"]);
