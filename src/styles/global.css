@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
+
 body {
   background-color: #8647ff;
   font-family: "Roboto", sans-serif;
@@ -13,8 +14,9 @@ h1 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
+  margin-left: 25%;
 }
 
 #new-task {
