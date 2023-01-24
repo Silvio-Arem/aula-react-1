@@ -31,7 +31,9 @@ function App() {
   }
 
   useEffect(() => {
+    if(tarefas.length >= 10){
     alert("Houve uma alteração na tarefa")
+  };
   }, [tarefas]);
 
 
