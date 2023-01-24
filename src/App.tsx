@@ -1,8 +1,6 @@
 import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
 
-import "./styles/global.css"
-
 function App() {
   return (
     <main className="container">
