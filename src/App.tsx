@@ -9,12 +9,7 @@ interface Tarefa {
 }
 
 function App() {
-  const [tarefas, setTarefas] = useState<Tarefa[]>([
-    {
-    titulo: "tarefa 1",
-    done: false,
-  },
-  ]);
+  const [tarefas, setTarefas] = useState<Tarefa[]>([]);
 
   function adicionarTarefa() {
     setTarefas([
