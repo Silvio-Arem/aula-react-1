@@ -9,10 +9,21 @@ interface Tarefa {
 }
 
 function App() {
-  const [tarefas, setTarefas] = useState<Tarefa>([]);
+  const [tarefas, setTarefas] = useState<Tarefa[]>([
+    {
+    titulo: "tarefa 1",
+    done: false,
+  },
+  ]);
 
   function adicionarTarefa() {
-    setTarefas([...tarefas, "tarefa 2"]);
+    setTarefas([
+      ...tarefas,
+      {
+        titulo: "tarefa 2",
+        done: false,
+      },
+    ]);
   }
   return (
     <main className="container">
@@ -26,7 +37,6 @@ function App() {
         <TaskItem titulo="tarefa 1" />
         <TaskItem titulo="tarefa-2" done={true} />
       </TaskContainer>
-      {tarefas}
     </main>
   );
 }
