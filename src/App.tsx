@@ -34,8 +34,9 @@ function App() {
         </button>
       </div>
       <TaskContainer>
-        <TaskItem titulo="tarefa 1" />
-        <TaskItem titulo="tarefa-2" done={true} />
+        {tarefas.map((tarefa) => {
+          return <TaskItem titulo={tarefa.titulo} done={tarefa.done} />;
+        })}
       </TaskContainer>
     </main>
   );
