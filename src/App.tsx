@@ -4,12 +4,16 @@ import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
 
 function App() {
-  const = useState([]);
+  const [tarefas, setTarefas] = useState(["tarefa 1"]);
+
+  function adicionarTarefa() {
+    setTarefas([...tarefas, "tarefa 2"]);
+  }
   return (
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
       <div id="new-task">
-        <button id="btnAdd" className="btn btn-primary">
+        <button id="btnAdd" className="btn btn-primary" onClick={adicionarTarefa}>
           Add
         </button>
       </div>
@@ -17,6 +21,7 @@ function App() {
         <TaskItem titulo="tarefa 1" />
         <TaskItem titulo="tarefa-2" done={true} />
       </TaskContainer>
+      {tarefas}
     </main>
   );
 }
