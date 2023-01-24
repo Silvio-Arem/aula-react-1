@@ -1,7 +1,10 @@
+
+import { useState } from "react";
 import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
 
 function App() {
+  const = useState([]);
   return (
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
