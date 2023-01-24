@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     if(tarefas.length >= 10){
-    alert("Houve uma alteração na tarefa")
+    alert("Chegou à 10 tarefas!")
   };
   }, [tarefas]);
 
