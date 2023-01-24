@@ -22,7 +22,7 @@ function App() {
   }
 
   function concluirTarefa(posicao: number) {
-    const novaLista = tarefas;
+    const novaLista = [...tarefas];
 
     novaLista[posicao].done = true;
 
