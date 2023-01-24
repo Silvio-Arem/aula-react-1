@@ -30,6 +30,11 @@ function App() {
 
   }
 
+  useEffect(() => {
+    alert("Houve uma alteração na tarefa")
+  }, [tarefas]);
+
+
   return (
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
