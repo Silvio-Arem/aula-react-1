@@ -20,6 +20,16 @@ function App() {
       },
     ]);
   }
+
+  function concluirTarefa(posicao: number) {
+    const novaLista = tarefas;
+
+    novaLista[posicao].done = true;
+
+    setTarefas(novaLista);
+
+  }
+
   return (
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
@@ -29,8 +39,12 @@ function App() {
         </button>
       </div>
       <TaskContainer>
-        {tarefas.map((tarefa: Tarefa) => {
-          return <TaskItem titulo={tarefa.titulo} done={tarefa.done} />;
+        {tarefas.map((tarefa: Tarefa, posicao: number) => {
+          return <TaskItem
+            titulo={tarefa.titulo}
+            done={tarefa.done}
+            concluirTarefa={() => concluirTarefa(posicao)}
+          />;
         })}
       </TaskContainer>
     </main>
