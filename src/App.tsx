@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
 
@@ -12,7 +12,8 @@ function App() {
   const [tarefas, setTarefas] = useState<Tarefa[]>([]);
   const [tituloTarefa, setTituloTarefa] = useState<string>("");
 
-  function adicionarTarefa() {
+  function adicionarTarefa(event: React.FormEvent) {
+    event.preventDefault();
     setTarefas([
       ...tarefas,
       {
@@ -41,12 +42,12 @@ function App() {
   return (
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
-      <div id="new-task">
+      <form id="new-task" onSubmit={adicionarTarefa}>
         <input type="text" onChange={(event)=> setTituloTarefa(event.target.value) } value={tituloTarefa}/>
-        <button id="btnAdd" className="btn btn-primary" onClick={adicionarTarefa}>
+        <button id="btnAdd" className="btn btn-primary" type="submit">
           Add
         </button>
-      </div>
+      </form>
       <TaskContainer>
         {tarefas.map((tarefa: Tarefa, posicao: number) => {
           return <TaskItem
