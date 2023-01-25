@@ -16,7 +16,7 @@ function App() {
     setTarefas([
       ...tarefas,
       {
-        titulo: "tarefa 2",
+        titulo: tituloTarefa,
         done: false,
       },
     ]);
