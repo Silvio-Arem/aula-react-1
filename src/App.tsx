@@ -42,7 +42,7 @@ function App() {
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
       <div id="new-task">
-        <input type="text" name="" id="" value={tituloTarefa}/>
+        <input type="text" onChange={(event)=> setTituloTarefa(event.target.value) } value={tituloTarefa}/>
         <button id="btnAdd" className="btn btn-primary" onClick={adicionarTarefa}>
           Add
         </button>
