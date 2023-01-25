@@ -41,6 +41,7 @@ function App() {
     <main className="container">
       <h1 className="m-5">📋 Task Manager</h1>
       <div id="new-task">
+        <input type="text" name="" id="" />
         <button id="btnAdd" className="btn btn-primary" onClick={adicionarTarefa}>
           Add
         </button>
