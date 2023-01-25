@@ -21,6 +21,8 @@ function App() {
         done: false,
       },
     ]);
+
+    setTituloTarefa("");
   }
 
   function concluirTarefa(posicao: number) {
