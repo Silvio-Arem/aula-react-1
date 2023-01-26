@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 interface ItemProps {
     done?: boolean;
 }
-export const item = styled.li<ItemProps>`
+export const Item = styled.li<ItemProps>`
     display: flex;
     justify-content: space-between;
     text-align: left;
