@@ -1,3 +1,5 @@
+import {BotaoDefault} from "./styles";
+
 interface BotaoProps {
     texto: string;
     acao: () => void;
@@ -5,6 +7,6 @@ interface BotaoProps {
 
 export default function Botao(props: BotaoProps) {
     return (
-        <button onClick={props.acao}>{props.texto}</button>
+        <BotaoDefault onClick={props.acao}>{props.texto}</BotaoDefault>
     )
 }
