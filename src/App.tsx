@@ -47,7 +47,7 @@ function App() {
       <h1 className="m-5">📋 Task Manager</h1>
       <form id="new-task" onSubmit={adicionarTarefa}>
         <input type="text" onChange={(event)=> setTituloTarefa(event.target.value) } value={tituloTarefa}/>
-        <Botao texto="Adicionar" />
+        <Botao texto="Adicionar" cor="error"/>
       </form>
       <TaskContainer>
         {tarefas.map((tarefa: Tarefa, posicao: number) => {
