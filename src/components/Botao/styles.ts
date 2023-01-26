@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-const coresBotao = {
+interface CoresBotao {
+    [key: string]: string;
+}
+
+const coresBotao: CoresBotao = {
     success: "green",
     alert: "yellow",
-    arror: "red",
+    error: "red",
 };
 
 interface BotaoDefaultProps {
@@ -12,7 +16,7 @@ interface BotaoDefaultProps {
 
 export const BotaoDefault = styled.button<BotaoDefaultProps>`
     border: none;
-    background-color: green;
+    background-color: ${(props) => coresBotao[props.cor]};
     color: #fff;
     border-radius: 20px;
     padding: 10px 30px;
