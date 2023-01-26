@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+const coresBotao = {
+    success: "green",
+    alert: "yellow",
+    arror: "red",
+}
+
+
 export const BotaoDefault = styled.button`
     border: none;
     background-color: green;
