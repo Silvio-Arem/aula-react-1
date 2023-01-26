@@ -2,7 +2,7 @@ import {BotaoDefault} from "./styles";
 
 interface BotaoProps {
     texto: string;
-    acao: () => void;
+    acao?: () => void;
 }
 
 export default function Botao(props: BotaoProps) {

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import TaskContainer from "./components/LinkContainer";
 import TaskItem from "./components/TaskItem";
-import { BotaoDefault } from "./components/Botao/styles";
+import Botao from "./components/Botao";
 
 interface Tarefa {
   titulo: string;
@@ -47,9 +47,7 @@ function App() {
       <h1 className="m-5">📋 Task Manager</h1>
       <form id="new-task" onSubmit={adicionarTarefa}>
         <input type="text" onChange={(event)=> setTituloTarefa(event.target.value) } value={tituloTarefa}/>
-        <BotaoDefault id="btnAdd" className="btn btn-primary" type="submit">
-          Add
-        </BotaoDefault>
+        <Botao texto="Adicionar" />
       </form>
       <TaskContainer>
         {tarefas.map((tarefa: Tarefa, posicao: number) => {
