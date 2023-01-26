@@ -4,10 +4,13 @@ const coresBotao = {
     success: "green",
     alert: "yellow",
     arror: "red",
+};
+
+interface BotaoDefaultProps {
+    cor: string;
 }
 
-
-export const BotaoDefault = styled.button`
+export const BotaoDefault = styled.button<BotaoDefaultProps>`
     border: none;
     background-color: green;
     color: #fff;
